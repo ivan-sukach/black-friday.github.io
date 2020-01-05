@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Black Friday</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='css/index.css'>
+</head>
+<body>
+
+  <div id="blackFriday">
+
+    <div class="background"></div>
+    <section class="section-container">
+
+      <div class="main-container">
+        <div class="info-container">
+          <div class="info-logo">
+            <a href="#">
+              <img src="img/logo.png" alt="Альфа Банк">
+            </a>
+          </div>
+
+          <h1 class="info-title">Купуй на знижках з кредиткою «Максимум»</h1>
+
+          <ul class="info-list">
+            <li class="info-li">
+              <img src="img/speed.png" alt="">
+              <div class="info-li-text">
+                <h3 class="info-li__title">До 200 000 гривень</h3>
+                <span class="info-li__subtitle">кредитного ліміту</span>
+              </div>
+            </li>
+
+            <li class="info-li" >
+              <img src="img/credit.png" alt="">
+              <div class="info-li-text">
+                <h3 class="info-li__title">Оплата частинами до</h3>
+                <span class="info-li__subtitle">24 місяців під <span class="cross-out">1,8% </span> 1%*</span>
+              </div>
+            </li>
+
+            <li class="info-li" >
+              <img src="img/cash.png" alt="">
+              <div class="info-li-text">
+                <h3 class="info-li__title">Cashback до 20%</h3>
+                <span class="info-li__subtitle">на всі покупки</span>
+              </div>
+            </li>
+
+            <li class="info-li">
+              <img src="img/calendar.png" alt="">
+              <div class="info-li-text">
+                <h3 class="info-li__title">До 62 днів</h3>
+                <span class="info-li__subtitle">пільгового періоду</span>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+        <!-- /.info-container -->
+
+        <div class="footer-container">
+          <ul class="footer-list">
+            <li class="footer-li">
+              <div class="footer-li__img">
+                <img src="img/phone.svg" alt="">
+              </div>
+              <span>Швидке схвалення</span>
+            </li>
+            <li class="footer-li">
+              <div class="footer-li__img">
+                <img src="img/card.svg" alt="">
+              </div>
+              <span>Безкоштовна доставка</span>
+            </li>
+            <li class="footer-li">
+              <div class="footer-li__img">
+                <img src="img/paypass.svg" alt="">
+              </div>
+              <span>Безконтактні оплати</span>
+            </li>
+          </ul>
+        </div>
+        <!-- /.footer-container -->
+      </div>
+
+      <div class="form-container">
+        <h2 class="form-title">Замовити карту</h2>
+
+        <form class="form-wrapper" method="GET" action="#">
+          
+          <div class="form-input-wrapper">
+            <input v-on:input="maskText" v-on:blur="maskText" id="inputLastName" class="form-input" type="text" name="lastname" placeholder="Прізвище" required>
+            <span class="error-description"></span>
+          </div>
+          
+          <div class="form-input-wrapper">
+            <input v-on:input="maskText" v-on:blur="maskText" id="inputName" class="form-input" type="text" name="name" placeholder="Ім'я" required>
+            <span class="error-description"></span>
+          </div>
+          
+          <div class="form-input-wrapper">
+            <input v-on:input="maskText" v-on:blur="maskText" id="inputMiddleName" class="form-input" type="text" name="middlename" placeholder="По-батькові" required>
+            <span class="error-description"></span>
+          </div>
+          
+          <div class="form-input-wrapper">
+            <input v-on:input="maskNumbers" v-on:blur="maskNumbers" id="inputPhone" class="form-input" type="tel" name="tel" placeholder="Номер мобільного" required>
+            <span class="error-description"></span>
+          </div>
+          
+          <div class="form-input-wrapper">
+            <input v-on:input="maskNumbers" v-on:blur="maskNumbers" id="inputIdNumber" class="form-input" type="text" name="ipn" placeholder="ІПН" required>
+            <span class="error-description"></span>
+          </div>
+
+          <div class="form-input-wrapper">
+            <select v-on:change="selectChange" name="selectEmployment" id="selectEmployment" class="form-input form-select" required>
+              <option selected value="default">Тип працевлаштування</option>
+              <option value="officially">працюю офіційно</option>
+              <option value="notOfficially">працюю неофіційно</option>
+              <option value="privateEntrepreneur">приватний підприємець</option>
+              <option value="notworking">тимчасово не працюю</option>
+              <option value="pensioner">пенсіонер</option>
+              <option value="student">студент</option>
+            </select>
+          </div>
+
+          <div class="form-input-wrapper">
+            <select v-on:change="selectChange" name="selectRegion" id="selectRegion" class="form-input form-select" required>
+              <option selected value="default">Область проживання</option>
+              <option value="">м.Київ</option>
+              <option value="">Київська область</option>
+              <option value="">Одеська область</option>
+              <option value="">Дніпропетровська область</option>
+              <option value="">Чернігівська область</option>
+              <option value="">Харківська область</option>
+              <option value="">Житомирська область</option>
+              <option value="">Полтавська область</option>
+              <option value="">Херсонська область</option>
+              <option value="">Запорізька область</option>
+              <option value="">Луганська область</option>
+              <option value="">Донецька область</option>
+              <option value="">Вінницька область</option>
+              <option value="">Автономна Республіка Крим</option>
+              <option value="">Миколаївська область</option>
+              <option value="">Кіровоградська область</option>
+              <option value="">Сумська область</option>
+              <option value="">Львівська область</option>
+              <option value="">Черкаська область</option>
+              <option value="">Хмельницька область</option>
+              <option value="">Волинська область</option>
+              <option value="">Рівненська область</option>
+              <option value="">Івано-Франківська область</option>
+              <option value="">Тернопільська область</option>
+              <option value="">Закарпатська область</option>
+              <option value="">Чернівецька область</option>
+              <option value="">м.Севастополь</option>
+            </select>
+          </div>
+
+
+          <label class="form-conditions" for="conditions">
+            <input v-on:click="checkConditions" type="checkbox" id="inputConditions" :checked="validInputs.inputConditions" required>
+            Я погоджуюся з <a href="https://cashuclub.com.ua">умовами оформлення</a> онлайн заявки
+          </label>
+
+          <button class="form-btn" type="submit" :disabled="formBtnDisabled">Відправити заявку</button>
+        </form>
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src='js/index.js'></script>
+
+</body>
+</html
